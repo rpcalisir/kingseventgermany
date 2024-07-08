@@ -6,6 +6,7 @@ import 'package:kingseventgermany/src/utils/widget_themes/text_theme.dart';
 import '../widget_themes/input_decoration_theme.dart';
 
 class AppThemeUtility {
+  // Private Constructor
   AppThemeUtility._();
 
   static ThemeData lightTheme = ThemeData(
