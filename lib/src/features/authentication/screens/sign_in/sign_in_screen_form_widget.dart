@@ -3,8 +3,8 @@ import 'package:kingseventgermany/src/constants/sizes.dart';
 import 'package:kingseventgermany/src/constants/text_strings.dart';
 
 
-class SignInForm extends StatelessWidget {
-  const SignInForm({
+class SignInScreenFormWidget extends StatelessWidget {
+  const SignInScreenFormWidget({
     super.key,
   });
 

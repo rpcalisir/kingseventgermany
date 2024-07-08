@@ -22,7 +22,7 @@ class SignInScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   FormHeaderWidget(),
-                  SignInForm(),
+                  SignInScreenFormWidget(),
                 ],
               )),
         ),
