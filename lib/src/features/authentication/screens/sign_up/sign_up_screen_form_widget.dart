@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:kingseventgermany/src/constants/sizes.dart';
 import 'package:kingseventgermany/src/constants/text_strings.dart';
+import 'package:flutter/cupertino.dart';
 
 class SignUpScreenFormWidget extends StatefulWidget {
   const SignUpScreenFormWidget({

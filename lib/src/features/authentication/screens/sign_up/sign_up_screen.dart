@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kingseventgermany/src/common_widgets/form/form_header_widget.dart';
+import 'package:kingseventgermany/src/constants/icon_strings.dart';
 import 'package:kingseventgermany/src/constants/sizes.dart';
 import 'package:kingseventgermany/src/constants/text_strings.dart';
 import 'package:kingseventgermany/src/features/authentication/screens/sign_up/sign_up_screen_form_widget.dart';
@@ -18,7 +19,8 @@ class SignUpScreen extends StatelessWidget {
           padding: const EdgeInsets.all(rDefaultSize),
           child: const Column(
             children: [
-              FormHeaderWidget(),
+              FormHeaderWidget(image: signUpIcon, title: rAppTitle, subTitle: rSignUpSubTitle, 
+              crossAxisAlignment: CrossAxisAlignment.center, heightBetween: 30.0, textAlign: TextAlign.center),
               SignUpScreenFormWidget(),
             ],
           ),

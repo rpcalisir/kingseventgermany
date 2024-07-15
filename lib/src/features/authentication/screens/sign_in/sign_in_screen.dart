@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kingseventgermany/src/common_widgets/form/form_header_widget.dart';
+import 'package:kingseventgermany/src/constants/icon_strings.dart';
 import 'package:kingseventgermany/src/constants/sizes.dart';
 import 'package:kingseventgermany/src/constants/text_strings.dart';
 import 'package:kingseventgermany/src/features/authentication/screens/sign_in/sign_in_screen_form_widget.dart';
-
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -19,10 +19,10 @@ class SignInScreen extends StatelessWidget {
           child: Container(
               padding: const EdgeInsets.all(rDefaultSize),
               child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  FormHeaderWidget(),
-                  SignInScreenFormWidget(),
+                  FormHeaderWidget(image: signInIcon, title: rAppTitle, subTitle: rSignInSubTitle, 
+                  crossAxisAlignment: CrossAxisAlignment.center, heightBetween: 30.0, textAlign: TextAlign.center),
+                  SignInForm(),
                 ],
               )),
         ),

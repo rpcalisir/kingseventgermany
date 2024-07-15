@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:kingseventgermany/src/constants/icon_strings.dart';
 import 'package:kingseventgermany/src/constants/text_strings.dart';
 
-
 class SignUpScreenFooterWidget extends StatelessWidget {
   const SignUpScreenFooterWidget({
     super.key,

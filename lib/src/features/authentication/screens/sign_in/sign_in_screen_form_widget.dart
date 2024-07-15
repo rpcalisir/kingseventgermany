@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kingseventgermany/src/constants/sizes.dart';
 import 'package:kingseventgermany/src/constants/text_strings.dart';
+import 'package:kingseventgermany/src/features/authentication/screens/sign_in/forget_password/forget_password_email/forget_password_email_screen.dart';
+import 'package:kingseventgermany/src/features/authentication/screens/sign_in/forget_password/forget_password_options/forget_password_button_widget.dart';
 
-
-class SignInScreenFormWidget extends StatelessWidget {
-  const SignInScreenFormWidget({
+class SignInForm extends StatelessWidget {
+  const SignInForm({
     super.key,
   });
 
@@ -35,13 +37,19 @@ class SignInScreenFormWidget extends StatelessWidget {
                       onPressed: null, icon: Icon(Icons.remove_red_eye_sharp))),
             ),
             const SizedBox(height: rFormHeight - 20),
-            const Align(
+
+            //FORGET PASSWORD BUTTON
+            Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: null,
-                child: Text(rforgetPassword),
+                onPressed: (){
+                  buildShowModalBottomSheet(context);
+                },
+                child: const Text(rforgetPassword),
               ),
             ),
+
+            //SIGN IN BUTTON
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -51,5 +59,35 @@ class SignInScreenFormWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+
+
+  Future<dynamic> buildShowModalBottomSheet(BuildContext context) {
+    return showModalBottomSheet(
+                  context: context, 
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                  builder: (context) => Container(
+                    padding: const EdgeInsets.all(rDefaultSize),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(rforgetPasswordTitle, style: Theme.of(context).textTheme.headlineMedium),
+                        Text(rforgetPasswordSubTitle, style: Theme.of(context).textTheme.bodyMedium),
+                        const SizedBox(height: rFormHeight - 20),
+
+                        ForgetPasswordButtonWidget(
+                          btnIcon: Icons.mail_outline_rounded,
+                          title: rEmail,
+                          subTitle: rResetViaEmail,
+                          onTap: () {
+                            Navigator.pop(context);
+                            Get.to(() => const ForgetPasswordEmailScreen());
+                          },
+                        ),
+
+                      ],
+                    ),
+                  ),
+                );
   }
 }
