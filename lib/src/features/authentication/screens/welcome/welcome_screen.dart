@@ -3,7 +3,6 @@ import 'package:kingseventgermany/src/constants/image_strings.dart';
 import 'package:kingseventgermany/src/features/authentication/screens/sign_in/sign_in_screen.dart';
 import 'package:kingseventgermany/src/features/authentication/screens/sign_up/sign_up_screen.dart';
 
-
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
 
@@ -15,7 +14,7 @@ class WelcomeScreen extends StatelessWidget {
     var isDarkMode = brightnessOfScreen == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDarkMode ? Colors.black87 : Colors.yellow,
+      backgroundColor: isDarkMode ? Colors.black87 : Colors.blue,
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         child: Column(
@@ -26,6 +25,11 @@ class WelcomeScreen extends StatelessWidget {
               child: Image(
                 image: const AssetImage(welcomeImage),
                 height: heightOfScreen * 0.4,
+                errorBuilder: (context, error, stackTrace) {
+                  // ignore: avoid_print
+                  print("Error loading image: $error");
+                  return const Text('Failed to load image');
+                },
               ),
             ),
             Text(

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kingseventgermany/src/common_widgets/form/form_header_widget.dart';
 import 'package:kingseventgermany/src/constants/icon_strings.dart';
 import 'package:kingseventgermany/src/constants/sizes.dart';
 import 'package:kingseventgermany/src/constants/text_strings.dart';
+import 'package:kingseventgermany/src/features/authentication/screens/sign_in/forget_password/forget_password_otp/otp_screen.dart';
 
 class ForgetPasswordEmailScreen extends StatelessWidget {
   const ForgetPasswordEmailScreen({super.key});
@@ -32,7 +34,9 @@ class ForgetPasswordEmailScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Get.to(() => const OtpScreen());
+                    },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),

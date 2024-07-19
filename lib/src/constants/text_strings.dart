@@ -27,6 +27,11 @@ const String rInvalidPhoneNumber = "Invalid Phone Number";
 
 const String rSignUpSubTitle = "REGISTER NOW FOR OUR APP TO SEE UPCOMING EVENTS AND ALL DETAILS";
 
+//Otp Screen
+const String rOtpTitle = "CO\nDE";
+const String rOtpSubTitle = "Verification";
+const String rOtpMessage = "Enter the verification code sent at";
+
 
 //APP
 const String rFullName = "Full Name";

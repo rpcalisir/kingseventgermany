@@ -4,6 +4,7 @@ import 'package:kingseventgermany/src/constants/sizes.dart';
 import 'package:kingseventgermany/src/constants/text_strings.dart';
 import 'package:kingseventgermany/src/features/authentication/screens/sign_in/forget_password/forget_password_email/forget_password_email_screen.dart';
 import 'package:kingseventgermany/src/features/authentication/screens/sign_in/forget_password/forget_password_options/forget_password_button_widget.dart';
+import 'package:kingseventgermany/src/features/core/screens/dashboard/dashboard_screen.dart';
 
 class SignInForm extends StatelessWidget {
   const SignInForm({
@@ -53,7 +54,9 @@ class SignInForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: null, child: Text(rSignIn.toUpperCase())),
+                  onPressed: ((){
+                    Get.to(const DashboardScreen());
+                  }), child: Text(rSignIn.toUpperCase())),
             ),
           ],
         ),
